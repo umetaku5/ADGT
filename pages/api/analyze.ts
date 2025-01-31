@@ -203,7 +203,15 @@ async function fetchProposalContent(url: string) {
   }
 }
 
-const getPrompt = (content: any, policy: string, language: string) => {
+interface ProposalContent {
+  title: string;
+  content: string;
+  platform: string;
+  organization: string;
+  proposer?: string;
+}
+
+const getPrompt = (content: ProposalContent, policy: string, language: string) => {
   const basePrompt = language === 'ja' ? `
 以下のDAOプロポーザルを分析し、指定されたポリシーに基づいて評価してください。
 
