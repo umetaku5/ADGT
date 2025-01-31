@@ -116,7 +116,7 @@ export default function Home() {
         <div className="w-1/3 border-r border-gray-200 p-4 h-[calc(100vh-64px)] overflow-y-auto">
           <div className="space-y-6">
             <section>
-              <h2 className="text-sm font-medium mb-2">Input</h2>
+              <h2 className="text-sm font-medium mb-2">Proposal</h2>
               <input
                 type="text"
                 value={proposalUrl}

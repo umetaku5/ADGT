@@ -1,3 +1,46 @@
+# AI DAO Governance Tool (ADGT)
+
+DAOのプロポーザルを分析し、投票判断をサポートするAIツールです。
+
+## 機能
+
+- プロポーザルの自動分析
+- 日本語/英語対応
+- PDFファイルのサポート
+- カスタマイズ可能な評価ポリシー
+
+## 開発環境のセットアップ
+
+```bash
+# リポジトリのクローン
+git clone https://github.com/umetaku5/ADGT.git
+cd ADGT
+
+# 依存関係のインストール
+npm install
+
+# 環境変数の設定
+cp .env.example .env.local
+# .env.localファイルを編集してAPIキーを設定
+
+# 開発サーバーの起動
+npm run dev
+```
+
+## 環境変数
+
+- `OPENAI_API_KEY`: OpenAI APIキー
+- `TALLY_API_KEY`: Tally APIキー
+
+## デプロイ
+
+このプロジェクトはVercelにデプロイすることができます。
+デプロイ時は必要な環境変数を設定してください。
+
+## API Reference
+
+APIの詳細な使用方法については[docs/api-references.md](docs/api-references.md)を参照してください。
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
