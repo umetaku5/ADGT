@@ -198,8 +198,7 @@ export default function Home() {
                       width={24}
                       height={24}
                       className="rounded-full"
-                      onError={(e) => {
-                        // @ts-expect-error - currentTargetのsrcプロパティは存在します
+                      onError={(e: { currentTarget: HTMLImageElement }) => {
                         e.currentTarget.src = 'https://cdn.stamp.fyi/avatar/eth';
                       }}
                     />
