@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from 'next/image';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -192,11 +192,14 @@ export default function Home() {
                 <div className="flex justify-between items-center">
                   <h2 className="text-xl font-semibold">{result.proposalTitle}</h2>
                   <div className="flex items-center gap-2">
-                    <img
+                    <Image
                       src={`https://cdn.stamp.fyi/avatar/${result.organization.toLowerCase()}`}
                       alt={result.organization}
-                      className="w-6 h-6 rounded-full"
+                      width={24}
+                      height={24}
+                      className="rounded-full"
                       onError={(e) => {
+                        // @ts-ignore
                         e.currentTarget.src = 'https://cdn.stamp.fyi/avatar/eth';
                       }}
                     />
